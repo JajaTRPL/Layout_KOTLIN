@@ -1,0 +1,226 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Top Section with Company Information -->
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PT XYZ"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="22dp">
+    </TextView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_company_name"
+        android:id="@+id/location"
+        android:layout_marginLeft="22dp">
+
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vector"
+            android:paddingTop="6dp"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sleman"
+            android:paddingTop="4dp"
+            android:layout_toRightOf="@id/img_location"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/box_update_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_radius"
+        android:layout_below="@id/location"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp">
+
+        <TextView
+            android:id="@+id/tv_update_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi perubahan data katalog"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/gray"/>
+
+
+        <TextView
+            android:id="@+id/tv_last_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembaharuan terakhir: "
+            android:layout_below="@id/tv_update_info"
+            android:textColor="@color/gray"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tgl_terakhir"
+            android:layout_below="@id/tv_update_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tgl_terakhir"
+            android:textColor="@color/orange"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/tv_last_update"/>
+
+        <TextView
+            android:id="@+id/tv_next_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pembaharuan selanjutnya: "
+            android:layout_below="@id/tv_last_update"
+            android:textColor="@color/gray"
+            android:paddingTop="4dp"/>
+
+        <TextView
+            android:id="@+id/tgl_selanjutnya"
+            android:layout_below="@id/tgl_terakhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tgl_terakhir"
+            android:textColor="@color/orange"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/tv_next_update"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/box_katalog"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_below="@id/box_update_info"
+        android:layout_alignStart="@id/box_update_info"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bc_button"
+        android:elevation="10dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/icon_katalog"
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pencarian" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_katalog"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Katalog Tender"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/box_tender"
+        android:layout_below="@id/box_update_info"
+        android:layout_alignEnd="@id/box_update_info"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:background="@drawable/bc_button"
+        android:elevation="10dp"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        >
+        <ImageView
+            android:id="@+id/icon_tender"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:src="@drawable/check"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tender Tersimpan"
+            android:layout_below="@id/icon_tender"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/box_laporan"
+        android:layout_below="@id/box_katalog"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:layout_alignStart="@id/box_katalog"
+        android:background="@drawable/bc_button"
+        android:elevation="10dp"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:id="@+id/icon_laporan"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:src="@drawable/tripple"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laporan Statistik"
+            android:layout_below="@id/icon_laporan"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/box_pengaturan"
+        android:layout_below="@id/box_tender"
+        android:layout_alignEnd="@id/box_update_info"
+        android:layout_width="165dp"
+        android:layout_height="165dp"
+        android:background="@drawable/bc_button"
+        android:elevation="10dp"
+        android:padding="20dp"
+        android:layout_alignTop="@id/box_laporan"
+        >
+        <ImageView
+            android:id="@+id/icon_pengaturan"
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:src="@drawable/group"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengaturan"
+            android:layout_below="@id/icon_pengaturan"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
